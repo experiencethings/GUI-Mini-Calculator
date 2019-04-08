@@ -1,0 +1,89 @@
+from tkinter import *
+root=Tk()
+root.geometry('600x600')
+L1=Label(root,text='Calculator',font=('Arial',20,'bold'))
+L1.place(x=200,y=50)
+L2=Label(root,text='Enter 1st Number:',font=('Arial',15))
+L2.place(x=100,y=100)
+E1=Entry(root,fg='Black')
+E1.place(x=290,y=105)
+L4=Label(root,text='Enter 2nd Number:',font=('Arial',15))
+L4.place(x=100,y=150)
+E2=Entry(root,fg="Black")
+E2.place(x=290,y=155)
+
+def add():
+    print("E1.get()",E1.get())
+    print("E2.get()",E2.get())
+    a=int(E1.get())
+    b=int(E2.get())
+    add=a+b
+    print("Answer",add)
+    E3.insert(0,add)
+
+B1=Button(root,text='+',command=add,font=('Arial',13,'bold'))
+B1.place(x=100,y=200)
+E3=Entry(root,fg="Black")
+E3.place(x=150,y=205)
+
+def sub():
+    a=int(E1.get())
+    b=int(E2.get())
+    sub=a-b
+    print("Anwser",sub)
+    E4.insert(0,sub)
+
+B2=Button(root,text='-',command=sub,font=('Arial',15,'bold'))
+B2.place(x=100,y=250)
+E4=Entry(root,font=('Arial',13))
+E4.place(x=150,y=255)
+
+def mul():
+    a=int(E1.get())
+    b=int(E2.get())
+    mul=a*b
+    print("Anwser",mul)
+    E5.insert(0,mul)
+
+B3=Button(root,text='*',command=mul,font=('Arial',15,'bold'))
+B3.place(x=100,y=300)
+E5=Entry(root,font=('Arial',13))
+E5.place(x=150,y=305)
+
+def div():
+    a=int(E1.get())
+    b=int(E2.get())
+    div=a/b
+    print("Anwser",div)
+    E6.insert(0,div)
+
+B4=Button(root,text='/',command=div,font=('Arial',15,'bold'))
+B4.place(x=100,y=350)
+E6=Entry(root,font=('Arial',13))
+E6.place(x=150,y=355)
+
+def rem():
+    a=int(E1.get())
+    b=int(E2.get())
+    rem=a%b
+    print("Anwser",rem)
+    E7.insert(0,rem)
+
+B5=Button(root,text='rem',command=rem,font=('Arial',10,'bold'))
+B5.place(x=100,y=400)
+E7=Entry(root,font=('Arial',13))
+E7.place(x=150,y=405)
+
+def power():
+    a=int(E1.get())
+    b=int(E2.get())
+    power=a**b
+    print("Anwser",power)
+    E8.insert(0,power)
+
+B6=Button(root,text='^',command=power,font=('Arial',10,'bold'))
+B6.place(x=100,y=450)
+E8=Entry(root,font=('Arial',13))
+E8.place(x=150,y=455)
+
+root.mainloop()
